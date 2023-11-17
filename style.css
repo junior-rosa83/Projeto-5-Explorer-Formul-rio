@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, input {
+  background: #D9D9D9;
+  font-family: 'Poppins', sans-serif;
+}
+
+#retangulo {
+  width: 100%;
+  height: 368px;
+
+  background: black;
+
+  margin-top: 0;
+  position: absolute;
+
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  width: 736px;
+  margin: auto;
+}
+
+header #text {
+  width: 319px;
+  height: 160px;
+  margin-top: 80px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  line-height: 42px;
+  font-size: 36px;
+}
+
+p {
+  margin-top: 24px;
+  color: #42D3FF;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+form {
+  width: 736px;
+  min-height: 1138px;
+  margin: auto;
+  background: #FAFAFC;
+  border-radius: 8px 8px 0 0;
+  padding: 64px 64px 26px;
+  margin-top: 38px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+
+  font-family: 'Archivo', sans-serif;
+
+  border-bottom: 1px solid #E6E6F0; 
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+.wrapper label {
+  color: #4E4958;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+
+  margin: 24px 0 8px;
+}
+
+.wrapper label span {
+  color: #6d6d6d;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+
+  margin-left: 12px;
+}
+
+.wrapper input, textarea, select {
+  height: 56px;
+
+  border-radius: 8px;
+  border: 1px solid var(--back-lines-in-white, #E6E6F0);
+  background: var(--shapes-02, #FAFAFC);
+
+  color: #6d6d6d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  
+  padding: 0 24px;
+}
+
+textarea {
+  min-height: 168px;
+  max-width: 608px;
+  min-width: 608px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: top 50% right 20px;
+}
+
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+.col-3 .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+.wrapper-checkbox {
+  position: relative;
+  margin-top: 24px;
+}
+
+.wrapper-checkbox label {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  margin: 0;
+}
+
+.wrapper-checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+}
+
+.wrapper-checkbox label::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #E6E6F0;
+}
+
+.wrapper-checkbox input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2717_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2717_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.wrapper-checkbox input:focus + label::before {
+  outline: 2px solid black;
+}
+
+.button {
+  height: 136px;
+  width: 736px;
+  
+  border-radius: 0px 0px 8px 8px;
+  border-top: 1px solid #D6D6D6;;
+  
+  background: #F0F0F4;
+  margin: 0 auto 91px;
+  
+  display: flex;
+  flex-direction: column;
+  padding: 0 65px;
+  justify-content: space-evenly;
+}
+
+.button input {
+  height: 56px;
+  
+  border: 0;
+  border-radius: 8px;
+  background: #04D361;
+
+  color: #FFF;
+
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.button input:hover {
+  background: #42D3FF;
+  cursor: pointer; 
+}
+
+input:invalid {
+  border-radius: 8px;
+  border: 1px solid #FF1010;
+}
+
+  
+  
+
+
+
+
+
+

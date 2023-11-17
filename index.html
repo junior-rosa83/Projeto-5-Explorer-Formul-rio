@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto5</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="retangulo"></div>
+  <header>
+    <div id="text">
+      <h1>Crie e compartilhe seu evento.</h1>
+      <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+    </div>
+  </header>  
+  
+  <form id="form-1">
+    <fieldset>
+      <legend>Informações do evento</legend>
+        
+      <div class="wrapper">
+      
+        <label for="titulo">Título do evento<span>(minimo 8 caracteres)</span></label>
+        <input type="text" id="titulo" name="titulo" required minlength="8"/>
+
+        <label for="link">Link do evento<span>(comece com https://)</span></label>
+        <input type="url" id="link" name="link" required/>
+
+        <label for="contato">Whatsaap para contato<span>(somente números)</span></label>
+        <input type="number" id="contato" name="contato" required/>
+
+        <label for="informacoes">Informações extras</label>
+        <textarea id="titulo" name="titulo"></textarea>
+          
+        <label for="category">Categoria</label>
+        <select id="category" required>
+          <option value="selection" disabled>Selecione uma categoria:</option>
+          <option value="live">Ao vivo</option>
+          <option value="podcast">Podcast</option>
+          <option value="rec">Gravado</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset>  
+      <div class="wrapper">
+        <legend>Privacidade</legend>
+
+        <label for="email">E-mail do administrador<span>(digite um email válido)</span></label>
+        <input type="email" id="email" name="email" required/>
+
+        <label for="senha">Senha de acesso para os participantes<span>(mínimo 8 caracteres)</span></label>
+        <input type="password" id="senha" name="senha" required minlength="8"/>
+          
+        <div class="wrapper-checkbox">
+          <input type="checkbox" id="checkbox" name="marcacao"/>
+          <label for="checkbox">Evento privado</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="wrapper">
+        <legend>Dia e hora</legend>
+        <div class="col-3">
+          <div class="input-wrapper">  
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" required/>
+          </div>
+          <div class="input-wrapper">  
+            <label for="hora">Das</label>
+            <input type="time" id="hora" name="hora" required/>
+          </div>
+          <div class="input-wrapper">
+            <label for="horaFim">Até</label>
+            <input type="time" id="horaFim" name="horaFim" required/>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <footer class="button">
+    <input type="submit" form="form-1" value="Salvar evento">
+  </footer>
+</body>
+</html>
